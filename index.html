@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Will you be my Valentine?</title>
+  <link rel="stylesheet" href="css/game.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app" class="app-root">
+    <!-- Full-screen canvas for particles -->
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+    <!-- Overlay UI -->
+    <div id="overlay">
+      <!-- Scene 1 & 2: Press and hold / Release -->
+      <p id="promptText" class="prompt-text">Press and hold</p>
+
+      <!-- Scene 4: Choice buttons (hidden until after text formation) -->
+      <div id="choiceSection" class="choice-section hidden">
+        <div id="choiceGifWrap" class="choice-gif-wrap">
+          <div class="tenor-gif-embed choice-gif" data-postid="10854706892825184307" data-share-method="host" data-aspect-ratio="1.00457" data-width="100%"></div>
+          <div class="tenor-gif-embed choice-gif hidden" data-postid="835727259554211222" data-share-method="host" data-aspect-ratio="0.751004" data-width="100%"></div>
+          <div class="tenor-gif-embed choice-gif hidden" data-postid="25962626" data-share-method="host" data-aspect-ratio="0.98125" data-width="100%"></div>
+          <div class="tenor-gif-embed choice-gif hidden" data-postid="18123730622369852256" data-share-method="host" data-aspect-ratio="1.78218" data-width="100%"></div>
+          <div class="tenor-gif-embed choice-gif hidden" data-postid="3223392509479903783" data-share-method="host" data-aspect-ratio="1" data-width="100%"></div>
+          <div class="tenor-gif-embed choice-gif hidden" data-postid="17471199068082330017" data-share-method="host" data-aspect-ratio="0.75502" data-width="100%"></div>
+        </div>
+        <p id="choiceQuestion" class="choice-question">Will you be my Valentine?</p>
+        <p id="noTeaser" class="no-teaser hidden" aria-live="polite"></p>
+        <div class="buttons">
+          <button type="button" id="btnYes" class="choice-btn">Yes</button>
+          <button type="button" id="btnNo" class="choice-btn no-btn">No</button>
+          <button type="button" id="btnFinal" class="choice-btn final-btn">Let it be known across the realm: this Queen says yes</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: "That's it? Choose again." -->
+    <div id="modalOverlay" class="modal-overlay hidden">
+      <div class="modal-box">
+        <div class="tenor-gif-embed modal-gif" data-postid="17697144677667375156" data-share-method="host" data-aspect-ratio="1.29688" data-width="100%"></div>
+        <p>That's it? Choose again.</p>
+        <button type="button" id="modalClose" class="btn-close">OK</button>
+      </div>
+    </div>
+
+    <!-- Final reveal: fireworks, image, optional text -->
+    <div id="revealScreen" class="reveal-screen hidden">
+      <canvas id="fireworkCanvas" class="firework-canvas" aria-hidden="true"></canvas>
+      <div id="revealContent" class="reveal-content">
+        <div id="revealImageWrap" class="reveal-image-wrap">
+          <!-- Replace src with your image path (e.g. image.jpg) -->
+          <img id="revealImage" src="valentine.JPG" alt="">
+        </div>
+        <p id="chosenWisely" class="chosen-wisely hidden">You have chosen wisely!</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
