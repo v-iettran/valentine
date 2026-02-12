@@ -40,7 +40,7 @@
 
   const NO_TEASER_TEXTS = [
     'Are you sure?',
-    'I spent 2 hours refining this. Are you sure?',
+    'I spent 2 hours making this...',
     'How about yes?',
     'CHOOSE YES.',
     'Oops...',
